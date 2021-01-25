@@ -1,3 +1,7 @@
 i {
     color: red;
 }
+
+.task-input-warning{
+    border-color: red;
+}
