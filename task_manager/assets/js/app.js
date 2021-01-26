@@ -4,8 +4,10 @@ const taskInput = document.querySelector('#task');
 const form = document.querySelector('#task-form'); 
 const filter = document.querySelector('#filter'); 
 const taskList = document.querySelector('.collection');
+const tasks = document.querySelectorAll(".collection-item");
 const clearBtn = document.querySelector('.clear-tasks');
 const reloadIcon = document.querySelector('.fa'); 
+
 
 // Adding event listners
 form.addEventListener("submit", addNewTask);
@@ -47,6 +49,14 @@ function addNewTask(e){
 }
 
 function filterTasks(e){
+    tasks.forEach(task => {
+        if (task.textContent.indexOf(filter.value) != -1){
+            task.style.display = 'block';
+        }
+        else{
+            task.style.display = 'none';
+        }
+    });
     
 }
 
