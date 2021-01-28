@@ -1,0 +1,11 @@
+.b-contain{
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+@media only screen and (max-width: 768px) {
+    .b-contain {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+  }
