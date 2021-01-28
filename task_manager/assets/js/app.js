@@ -4,10 +4,8 @@ const taskInput = document.querySelector('#task');
 const form = document.querySelector('#task-form'); 
 const filter = document.querySelector('#filter'); 
 const taskList = document.querySelector('.collection');
-const tasks = document.querySelectorAll(".collection-item");
 const clearBtn = document.querySelector('.clear-tasks');
 const reloadIcon = document.querySelector('.fa'); 
-
 
 // Adding event listners
 form.addEventListener("submit", addNewTask);
@@ -15,6 +13,10 @@ filter.addEventListener("keyup", filterTasks);
 clearBtn.addEventListener("click", clearAllTasks);
 taskList.addEventListener("click", removeTask);
 reloadIcon.addEventListener('click', reloadPage);
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.FormSelect.init(elems);
+  });
 
 
 
@@ -49,6 +51,7 @@ function addNewTask(e){
 }
 
 function filterTasks(e){
+    const tasks = document.querySelectorAll(".collection-item");
     tasks.forEach(task => {
         if (task.textContent.indexOf(filter.value) != -1){
             task.style.display = 'block';
