@@ -15,6 +15,7 @@ oprButtons.addEventListener("click", sendToDisplay);
 equalsButton.addEventListener("click", calculate);
 clearButton.addEventListener("click", clear);
 allClearButton.addEventListener("click", clearAll);
+specialFnButtons.document.addEventListener("click", specialFunctions);
 
 
 
@@ -38,4 +39,8 @@ function clear(e){
 
 function clearAll(e){
     display.value = '';
+}
+
+function specialFunctions(e){
+    
 }
