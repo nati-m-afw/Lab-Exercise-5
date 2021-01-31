@@ -18,8 +18,8 @@
             <!-- buttons -->
             <!-- Control buttons -->
             <div class="controls d-flex flex-row m-2">
-                <div class="flex-fill btn btn-light text-center m-1">(</div>
-                <div class="flex-fill btn btn-light text-center m-1">)</div>
+                <div class="flex-fill btn btn-light text-center m-1" id="open_parentheses">(</div>
+                <div class="flex-fill btn btn-light text-center m-1" id="close_parentheses">)</div>
                 <div class="flex-fill btn btn-secondary text-center m-1" id="clear">C</div>
                 <div class="flex-fill btn btn-danger text-center m-1" id="all-clear">AC</div>
                 <div class="flex-fill btn btn-primary text-center m-1" id="equals">=</div>
@@ -29,10 +29,10 @@
             <div class="d-flex flex-row">
                 <!-- Special function buttons -->
                 <div class="functions d-flex flex-column flex-fill m-2">
-                    <div class="flex-fill btn btn-light text-center m-1" data-function="Math.pow">x<sup>2</sup></div>
-                    <div class="flex-fill btn btn-light text-center m-1">&#8730</div>
-                    <div class="flex-fill btn-light text-center m-1 py-2">log</div>
-                    <div class="flex-fill btn-light text-center m-1 py-2">ln</div>
+                    <div class="flex-fill btn btn-light text-center m-1" id="square">x<sup>2</sup></div>
+                    <div class="flex-fill btn btn-light text-center m-1" id="root">&#8730</div>
+                    <div class="flex-fill btn-light text-center m-1 py-2" id="log">log</div>
+                    <div class="flex-fill btn-light text-center m-1 py-2" id="inverse">1 / x</div>
                 </div>
 
 
@@ -65,7 +65,7 @@
                 <div class="operators d-flex flex-column flex-fill m-2">
                     <div class="flex-fill btn btn-light text-center m-1">+</div>
                     <div class="flex-fill btn btn-light text-center m-1">-</div>
-                    <div class="flex-fill btn-light text-center m-1 py-2">x</div>
+                    <div class="flex-fill btn-light text-center m-1 py-2">*</div>
                     <div class="flex-fill btn-light text-center m-1 py-2">/</div>
                 </div>
             </div>

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     var instances = M.FormSelect.init(elems);
 });
-orderBtn.addEventListener("change", sort);
+orderBtn.addEventListener("change", changeSortOrder);
 
 
 // Event handlers
@@ -49,7 +49,7 @@ function addNewTask(e){
     li.appendChild(link);
     // Append to ul
     taskList.appendChild(li);
-    bubbleSort(orderBtn.value);
+    sort(orderBtn.value);
     taskInput.value = '';
     // taskInput.classList.remove("task-input-warning");
     taskInput.style.borderColor = "black";
@@ -83,12 +83,12 @@ function removeTask(e){
 
 }
 
-function sort(e){
+function changeSortOrder(e){
     if (orderBtn.value == 2){
-       bubbleSort(2);
+       sort(2);
     }
     else{
-        bubbleSort(1)
+        sort(1)
     }
 }
 
@@ -97,7 +97,7 @@ function reloadPage() {
     location.reload();
 }
 
-function bubbleSort(type){
+function sort(type){
     if(type == 2){
         // sort in descending order
         for(let i = 0; i < taskList.childElementCount; i++){
